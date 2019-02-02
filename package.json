@@ -11,7 +11,7 @@
     "ut-bitsyntax": "^6.0.17"
   },
   "devDependencies": {
-    "ut-tools": "^5.29.14"
+    "ut-tools": "^6.8.10"
   },
   "scripts": {
     "lint": "ut-lint .",

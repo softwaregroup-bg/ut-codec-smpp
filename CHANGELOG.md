@@ -1,3 +1,14 @@
+# [6.2.0](https://github.com/softwaregroup-bg/ut-codec-smpp/compare/v6.1.1...v6.2.0) (2019-02-02)
+
+
+### Bug Fixes
+
+* lint ([5b60e97](https://github.com/softwaregroup-bg/ut-codec-smpp/commit/5b60e97))
+* upgrade dependencies ([3a7bbae](https://github.com/softwaregroup-bg/ut-codec-smpp/commit/3a7bbae))
+* upgrade ut-bitsyntax ([b5c7921](https://github.com/softwaregroup-bg/ut-codec-smpp/commit/b5c7921))
+
+
+
 <a name="6.1.1"></a>
 ## [6.1.1](https://github.com/softwaregroup-bg/ut-codec-smpp/compare/v6.1.0...v6.1.1) (2017-11-18)
 

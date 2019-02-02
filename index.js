@@ -95,7 +95,7 @@ var tlvBuilders = {
     'user_message_reference': {
         fix: function(v) { return parseInt(v, 10); },
         builder: bitsyntax.parse('t:2/binary, l:16/integer, v:16/integer'),
-        tlv: {t: new Buffer('0204', 'hex'), l: 2, v: 0}
+        tlv: {t: Buffer.from('0204', 'hex'), l: 2, v: 0}
     }
 };
 function tvlBuild(k, v) {
@@ -118,7 +118,7 @@ var encodingsByName = {
     'ISO-8859-5': 6, // Cyrillic
     'ISO-8859-8': 7, // Latin/Hebrew
     'utf16le': 8, // ISO/IEC-10646
-    'UCS2': 8  // Alias of 'utf16le'
+    'UCS2': 8 // Alias of 'utf16le'
 };
 
 var encodingsById = invert(encodingsByName);
@@ -248,10 +248,10 @@ SmppParser.prototype.encode = function(data, $meta, context) {
         $meta.trace = context.trace;
     }
 
-    var body = new Buffer('');
+    var body = Buffer.alloc(0);
     if (this.patterns[opcode]) {
         if (!data.tlvs || isEmpty(data.tlvs)) {
-            data.tlvs = new Buffer(0); // pass empty buffer
+            data.tlvs = Buffer.alloc(0); // pass empty buffer
         } else {
             if (!isObject(data.tlvs)) {
                 throw new Error('data.tvls must be an object of tagName:value pairs');
@@ -263,7 +263,7 @@ SmppParser.prototype.encode = function(data, $meta, context) {
                 }
                 tlvs += tvlBuild(tlv, data.tlvs[tlv]).toString('hex');
             }, this);
-            data.tlvs = new Buffer(tlvs, 'hex');
+            data.tlvs = Buffer.from(tlvs, 'hex');
         }
         body = bitsyntax.build(this.patterns[opcode], data);
         if (!body) {

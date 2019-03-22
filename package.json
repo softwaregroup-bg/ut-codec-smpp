@@ -10,7 +10,8 @@
     "lodash.isobject": "3.0.2",
     "ut-bitsyntax": "^6.0.17"
   },
-  "devDependencies": {
+    "devDependencies": {
+    "tap": "^12.6.0",
     "ut-tools": "^6.8.10"
   },
   "scripts": {

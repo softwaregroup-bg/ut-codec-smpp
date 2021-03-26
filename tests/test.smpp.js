@@ -1,8 +1,8 @@
 function test(bdd, SmppParser, assert, expect, Validator, data) {
     bdd.describe('SMPP messages', function() {
-        var parser = new SmppParser({});
-        var encodedData = null;
-        var decodedData = null;
+        const parser = new SmppParser({});
+        let encodedData = null;
+        let decodedData = null;
         Object.keys(data.decodeTests).map(function(test) {
             bdd.it('#Should decode correctly: ' + test, function() {
                 encodedData = parser.decode(data.decodeTests[test].buf);

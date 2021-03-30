@@ -136,7 +136,7 @@ function SmppParser(config, val, log) {
     this.patterns = {};
     this.opCodes = {};
     this.headerPattern = bitsyntax.parse('commandId:32/integer, commandStatus:32/integer, sequenceNumber:32/integer, body/binary');
-    this.tlvPattern = bitsyntax.parse('t:16/integer, l:16/integer, v:l/string, next/binary');
+    this.tlvPattern = bitsyntax.parse('t:16/integer, l:16/integer, v:l/binary, next/binary');
     this.init(config);
 }
 

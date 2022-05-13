@@ -1,3 +1,12 @@
+# [7.0.0](https://github.com/softwaregroup-bg/ut-codec-smpp/compare/v6.2.3...v7.0.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* return tlv value as binary by default, do not change opcode in response ([0f1910b](https://github.com/softwaregroup-bg/ut-codec-smpp/commit/0f1910be65a8579f88f4178fa86488ed489837f9))
+
+
+
 ## [6.2.3](https://github.com/softwaregroup-bg/ut-codec-smpp/compare/v6.2.2...v6.2.3) (2020-01-20)
 
 
